@@ -13,7 +13,7 @@ function Layout() {
         <div className="col-3">
           <Leftbar />
         </div>
-        <div className="col-8">
+        <div className="col-9">
           <Outlet />
         </div>
       </div>

@@ -14,7 +14,7 @@ function Update() {
     name: '',
     gender: '',
     phone: '',
-    imageUrl: '',
+    image: '',
     id:userId
   });
 
@@ -38,7 +38,8 @@ function Update() {
           `http://localhost:1000/api/v2/updateTask/${itemId}`,
           { contact }
         ).then((response) => {
-          console.log("myres",response);
+          alert("Upadted Success!!")
+          window.location.replace("/")
         });
       } catch (error) {
         console.error(error);
@@ -49,7 +50,7 @@ function Update() {
       name: '',
       gender: '',
       phone: '',
-      imageUrl: '',
+      image: '',
     });
   };
 
@@ -98,13 +99,13 @@ function Update() {
             />
             </div>
             <div className="mb-3">
-            <label htmlFor="imageUrl" className="form-label">Image URL</label>
+            <label htmlFor="imageUrl" className="form-label">Email</label>
             <input
-                type="url"
+                type="email"
                 className="form-control"
                 id="imageUrl"
-                name="imageUrl"
-                value={contact.imageUrl}
+                name="image"
+                value={contact.image}
                 onChange={handleChange}
                 required
             />

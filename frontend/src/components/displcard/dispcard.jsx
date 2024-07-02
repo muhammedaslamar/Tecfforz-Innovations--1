@@ -38,6 +38,7 @@ function Dispcard() {
       })
       .then((response) => {
         alert("The task is Delted!!");
+        window.location.replace("/")
       });
   };
 
@@ -56,7 +57,7 @@ function Dispcard() {
               name={item.name}
               gender={item.gender} 
               phone={item.phone}
-              imageUrl={item.imageUrl}
+              image={item.image}
               id={item._id} 
               delid={del}
               upid={updateid} 

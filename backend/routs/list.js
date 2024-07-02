@@ -27,7 +27,6 @@ router.post("/addTask", verifyToken, async (req, res) => {
     try {
     const { name,gender,email,phone,image,id }= req.body.contact;
     const existingUser= await User.findById(id)
-    console.log(req.body)
     if (existingUser){
         const list=await List.findByIdAndUpdate(req.params.id,{name,gender,phone,image})
         list.save().then(()=>res.status(200).json({ message:"List is updated" }))

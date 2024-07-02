@@ -13,7 +13,7 @@ const Addcontact = () => {
     name: '',
     gender: '',
     phone: '',
-    imageUrl: '',
+    image: '',
     id:userId
   });
 
@@ -42,7 +42,8 @@ const Addcontact = () => {
           { contact },
           { headers: { Authorization: token } }
         ).then((response) => {
-          console.log(response);
+          alert("Contact added");
+          window.location.replace("/")
         });
       } catch (error) {
         console.error(error);
@@ -53,7 +54,7 @@ const Addcontact = () => {
       name: '',
       gender: '',
       phone: '',
-      imageUrl: '',
+      image: '',
     });
   };
 
@@ -110,9 +111,9 @@ const Addcontact = () => {
           <input
             type="email"
             className="form-control"
-            id="imageUrl"
-            name="imageUrl"
-            value={contact.imageUrl}
+            id="image"
+            name="image"
+            value={contact.image}
             onChange={handleChange}
             required
           />

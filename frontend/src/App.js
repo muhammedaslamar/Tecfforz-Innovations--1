@@ -1,7 +1,4 @@
 import React from "react";
-import Navbar from "./components/navbar/navbar";
-import Leftbar from "./components/leftbar/leftbar";
-import Navbar2 from "./components/navbar2/navbar2";
 import Signup from "./components/signup/signup";
 import Addtodo from "./components/add-contact/addcontact";
 import Login from "./components/login/login";

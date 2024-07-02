@@ -3,6 +3,7 @@ import './navbar.css';
 import { Link } from 'react-router-dom';
 import authService from '../authService'
 
+
 function Navbar() {
   //Take the user id
  const userId=authService.getCurrentId()

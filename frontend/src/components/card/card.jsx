@@ -1,7 +1,7 @@
 import React from 'react'
 import './card.css'
 import { Link } from 'react-router-dom';
-function card({name,gender,phone,imageUrl,id,delid,upid}) {
+function card({name,gender,phone,image,id,delid,upid}) {
     return (
         <div className="mt-4 mb-2">
           <div className="row">
@@ -9,9 +9,20 @@ function card({name,gender,phone,imageUrl,id,delid,upid}) {
               <div className="card p-3 mb-2 ">
                 <div className="d-flex justify-content-between">
                   <div className="d-flex flex-row align-items-center">
-                    <div className="icon">
+                    { gender === "Female"&&
+                      <>
+                        <div className="icon2">
                       <i className="bx bxl-mailchimp"></i>
-                    </div>
+                      </div>  
+                      </>
+                    }
+                    { gender === "Male"&&
+                      <>
+                        <div className="icon1">
+                      <i className="bx bxl-mailchimp"></i>
+                      </div>  
+                      </>
+                    }
                     <div className="ms-2 c-details">
                       <h6 className="mb-0">{name}</h6>
                       <span><i class="fa fa-map-marker" aria-hidden="true"></i>  Austin</span>
@@ -40,7 +51,7 @@ function card({name,gender,phone,imageUrl,id,delid,upid}) {
                   </div>
                 </div>
                 <div className="mt-3">
-                    <a href="" className="email-link"><i class="fa fa-envelope-o" aria-hidden="true"></i>   {imageUrl}</a>
+                    <a href="" className="email-link"><i class="fa fa-envelope-o" aria-hidden="true"></i>   {image}</a>
                   <div className="mt-3">
                     <div>
                         <span className="text-secondary marg-left">

@@ -5,18 +5,28 @@ import { Link } from 'react-router-dom';
 
 
 const SignUp = () => {
+
+  //State Components
+  //1->password2
+  const [password2, setpassword2] = useState('')
+
+  //2->maintain db stored data
   const [formData, setFormData] = useState({
     email: '',
     username: '',
     password: ''
   });
 
+  //3->maintain the errors
   const [errors, setErrors] = useState({
     email: '',
     username: '',
     password: ''
   });
 
+
+  //Form data managing
+  //1)->for handling the data except password 2
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -24,6 +34,13 @@ const SignUp = () => {
     });
   };
 
+  //2)->handling the for password 2
+  const handleChange2 = (e) => {
+   setpassword2(e.target.value)
+  };
+
+
+  //Frorm validation from frontend
   const validate = () => {
     let isValid = true;
     let errors = {};
@@ -47,19 +64,25 @@ const SignUp = () => {
     return isValid;
   };
 
+
+  //send the form data in to backend
   const handleSubmit = async(e) => {
     e.preventDefault();
-
     if (validate()) {
+      if(password2 === formData.password){
       await axios.post("http://localhost:1000/api/v1/register",formData).then((response)=>{
-        if(response.data){
-        alert("signup completed!!")
+        if(response.data.message === "Signup successful"){
+        alert(response.data.message)
         window.location.replace("/login");
+        }
+        else{
+          alert(response.data.message)
         }
       })
     }
     else{
-      alert("error!!!")
+      alert("Password miss match!!")
+    }
     }
   };
   
@@ -102,6 +125,15 @@ const SignUp = () => {
             onChange={handleChange}
           />
           {errors.password && <p>{errors.password}</p>}
+        </div>
+        <div>
+          <label>Re Password:</label>
+          <input
+          className="form-control"
+            type="password"
+            value={password2}
+            onChange={handleChange2}
+          />
         </div>
         <button type="submit">Sign Up</button>
       </form>

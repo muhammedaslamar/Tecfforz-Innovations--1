@@ -12,7 +12,7 @@ body {
     font-size: 13px
 }
 
-.icon {
+.icon1 {
     width: 50px;
     height: 50px;
     background-color: #eee;
@@ -21,9 +21,22 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 39px;
-    background-image: url("https://th.bing.com/th/id/OSK.HEROhSfada6XC6ndNMZM1nY65OrFDcGUFgueST7kMmBj5y4?rs=1&pid=ImgDetMain");
-    background-size: cover; /* Ensure the image covers the entire element */
-    background-position: center; /* Center the image */
+    background-image: url("https://static.vecteezy.com/system/resources/previews/019/896/008/original/male-user-avatar-icon-in-flat-design-style-person-signs-illustration-png.png");
+    background-size: cover; 
+    background-position: center;
+}
+.icon2 {
+    width: 50px;
+    height: 50px;
+    background-color: #eee;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 39px;
+    background-image: url("https://www.bing.com/th?id=OIP.wTK_cK_SaqU8fKDjgcnvHwHaHa&w=150&h=150&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2");
+    background-size: cover; 
+    background-position: center;
 }
 
 .badge span {
