@@ -1,0 +1,12 @@
+.list-group-custom {
+    position: relative;
+    margin: 0;
+    border-style: solid;
+    border-width: 0.5px;
+    border-color: rgb(218, 213, 206);
+    background: rgb(245, 245, 245);
+    padding: 10px;
+}
+.parentdiv{
+    width:230;
+}

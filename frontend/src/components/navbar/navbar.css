@@ -1,0 +1,78 @@
+body {
+    background: #d1d5db;
+    font-family: sans-serif;
+}
+
+.height {
+    height: 100vh;
+}
+
+.form {
+    position: relative;
+}
+
+.form .fa-search {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    color: #9ca3af;
+}
+
+.form span {
+    position: absolute;
+    right: 17px;
+    top: 13px;
+    padding: 2px;
+    border-left: 1px solid #d1d5db;
+}
+
+.left-pan {
+    padding-left: 7px;
+}
+
+.left-pan i {
+    padding-left: 10px;
+}
+
+.form-input {
+    height: 45px;
+    width: 300px;
+    text-indent: 40px;
+    border-radius: 10px;
+
+}
+
+.form-input:focus {
+    box-shadow: none;
+    border: none;
+}
+
+
+.dropdown {
+    margin-left: 20px;
+}
+
+.dropdown-toggle {
+    height: 45px; 
+    border-radius: 10px;
+}
+
+.dropdown-menu {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    border: none;
+}
+.bd{
+    border-style: solid;
+    border-width: 0.5px;
+    border-color: rgb(218, 213, 206);
+}
+.title-name{
+    padding-left: 8px;
+    font-weight: 600;
+    font-family:Arial, Helvetica, sans-serif
+}
+.forms{
+    margin-left: 55px;
+}
+  
